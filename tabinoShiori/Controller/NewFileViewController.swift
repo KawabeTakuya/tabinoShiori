@@ -14,15 +14,19 @@ class NewFileViewController: UIViewController{
     
     @IBOutlet weak var tripTitle: UITextField!
     
+    private let picker = PickerTextField()
+    
     @IBOutlet weak var peoplePicker: PickerTextField!
     
     @IBOutlet weak var schedulePicker: PickerTextField!
     
     @IBOutlet weak var situationPicker: PickerTextField!
     
+    private let pickerview = UIPickerView()
+    
     private var peoplePickerview: UIPickerView = UIPickerView()
     
-    private let peopleList = ["1人旅","2人旅","3人旅","4人旅","5人以上"]
+    private let peopleList = ["1人","2人","3人","4人","5人以上"]
     
     private var schedulePickerview: UIPickerView = UIPickerView()
     
@@ -39,70 +43,57 @@ class NewFileViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        peoplePicker.text = "人数の選択（必須）"
-        schedulePicker.text = "日程の選択(必須)"
-        situationPicker.text = "日程の選択(必須)"
-        peopleSetup()
-        scheduleSetup()
-        situationSetup()
-    checkPermission.checkCamera()
+        peoplePicker.text = ""
+        schedulePicker.text = ""
+        situationPicker.text = ""
+        setup()
+        checkPermission.checkCamera()
         
     }
     
-    private func peopleSetup() {
-        
-        peoplePickerview.delegate = self
-        peoplePickerview.dataSource = self
-        let toolbar = UIToolbar()
-        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action:#selector(NewFileViewController.peopleTappdeDone))
-        toolbar.items = [space,doneButton]
-        toolbar.sizeToFit()
-        peoplePicker.inputView = peoplePickerview
-        peoplePicker.inputAccessoryView = toolbar
-        
-    }
+        private func setup(){
     
-    @objc func peopleTappdeDone(){
-        peoplePicker.resignFirstResponder()
-    }
+            //UIImagePickerControllerDelegate
+            peoplePickerview.delegate = self
+            peoplePickerview.dataSource = self
+            schedulePickerview.delegate = self
+            schedulePickerview.dataSource = self
+            situationPickerview.delegate = self
+            situationPickerview.dataSource = self
+            //UIToolbarの継承
+            let toolbar = UIToolbar()
+            //Doneを右に表示するためのスペース
+            let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+            //Doneボタン
+            let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action:#selector(NewFileViewController.tappdeDone))
+            //toolbarにスペースとDoneを追加
+            toolbar.items = [space,doneButton]
+            //toolbarの表示方法を指定
+            toolbar.sizeToFit()
+            //Pickerviewを埋め込み
+            peoplePicker.inputView = peoplePickerview
+            //toolbarを表示
+            peoplePicker.inputAccessoryView = toolbar
+            schedulePicker.inputView = schedulePickerview
+            schedulePicker.inputAccessoryView = toolbar
+            situationPicker.inputView = situationPickerview
+            situationPicker.inputAccessoryView = toolbar
+    
+        }
 
-    private func scheduleSetup() {
-        
-        schedulePickerview.delegate = self
-        schedulePickerview.dataSource = self
-        let toolbar = UIToolbar()
-        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action:#selector(NewFileViewController.scheduleTappdeDone))
-        toolbar.items = [space,doneButton]
-        toolbar.sizeToFit()
-        schedulePicker.inputView = schedulePickerview
-        schedulePicker.inputAccessoryView = toolbar
-        
-    }
-    
-    @objc func scheduleTappdeDone(){
+    //Doneボタンの処理
+    @objc func tappdeDone(){
+        peoplePicker.resignFirstResponder()
         schedulePicker.resignFirstResponder()
-    }
-    
-    private func situationSetup() {
-        
-        situationPickerview.delegate = self
-        situationPickerview.dataSource = self
-        let toolbar = UIToolbar()
-        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action:#selector(NewFileViewController.situationTappdeDone))
-        toolbar.items = [space,doneButton]
-        toolbar.sizeToFit()
-        situationPicker.inputView = situationPickerview
-        situationPicker.inputAccessoryView = toolbar
-        
-    }
-    
-    @objc func situationTappdeDone(){
         situationPicker.resignFirstResponder()
     }
     
+    //スクロール範囲外が押された時に閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        peoplePicker.resignFirstResponder()
+        schedulePicker.resignFirstResponder()
+        situationPicker.resignFirstResponder()
+    }
     
     @IBAction func albumPick(_ sender: Any) {
         
@@ -154,10 +145,9 @@ extension NewFileViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
 }
     
-    
-
 }
 
+//アルバムから画像を取得
 extension NewFileViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     func createImagePicker(sourceType:UIImagePickerController.SourceType){
