@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E926F7A0FC63FDCF3C6D3B6 /* Pods_tabinoShiori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0843C37DF1610F705B79593 /* Pods_tabinoShiori.framework */; };
 		4A1549BE25ECE57C005BB883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1549BD25ECE57C005BB883 /* AppDelegate.swift */; };
 		4A1549C025ECE57C005BB883 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1549BF25ECE57C005BB883 /* SceneDelegate.swift */; };
 		4A1549C225ECE57C005BB883 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1549C125ECE57C005BB883 /* ViewController.swift */; };
@@ -20,9 +21,11 @@
 		4A1549E425FF2CEB005BB883 /* NewFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1549E325FF2CEB005BB883 /* NewFileViewController.swift */; };
 		4A1549E725FF3778005BB883 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1549E625FF3778005BB883 /* PickerTextField.swift */; };
 		4A1549E92601038F005BB883 /* CheckPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1549E82601038F005BB883 /* CheckPermission.swift */; };
+		4A1549EB26024F34005BB883 /* MyTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1549EA26024F34005BB883 /* MyTripViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C966E500116F984D472DEBC /* Pods-tabinoShiori.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabinoShiori.release.xcconfig"; path = "Target Support Files/Pods-tabinoShiori/Pods-tabinoShiori.release.xcconfig"; sourceTree = "<group>"; };
 		4A1549BA25ECE57C005BB883 /* tabinoShiori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabinoShiori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A1549BD25ECE57C005BB883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A1549BF25ECE57C005BB883 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		4A1549E325FF2CEB005BB883 /* NewFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFileViewController.swift; sourceTree = "<group>"; };
 		4A1549E625FF3778005BB883 /* PickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		4A1549E82601038F005BB883 /* CheckPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPermission.swift; sourceTree = "<group>"; };
+		4A1549EA26024F34005BB883 /* MyTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripViewController.swift; sourceTree = "<group>"; };
+		D0843C37DF1610F705B79593 /* Pods_tabinoShiori.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tabinoShiori.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC147D87490208565BDDE373 /* Pods-tabinoShiori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabinoShiori.debug.xcconfig"; path = "Target Support Files/Pods-tabinoShiori/Pods-tabinoShiori.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E926F7A0FC63FDCF3C6D3B6 /* Pods_tabinoShiori.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +63,8 @@
 			children = (
 				4A1549BC25ECE57C005BB883 /* tabinoShiori */,
 				4A1549BB25ECE57C005BB883 /* Products */,
+				B247688C293A38B5B12AC541 /* Pods */,
+				FB78FA7141A0F39DBD702E2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +95,7 @@
 			children = (
 				4A1549C125ECE57C005BB883 /* ViewController.swift */,
 				4A1549E325FF2CEB005BB883 /* NewFileViewController.swift */,
+				4A1549EA26024F34005BB883 /* MyTripViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,6 +122,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B247688C293A38B5B12AC541 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC147D87490208565BDDE373 /* Pods-tabinoShiori.debug.xcconfig */,
+				3C966E500116F984D472DEBC /* Pods-tabinoShiori.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FB78FA7141A0F39DBD702E2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0843C37DF1610F705B79593 /* Pods_tabinoShiori.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A1549CE25ECE57D005BB883 /* Build configuration list for PBXNativeTarget "tabinoShiori" */;
 			buildPhases = (
+				87D1108E28818BF076E906FF /* [CP] Check Pods Manifest.lock */,
 				4A1549B625ECE57C005BB883 /* Sources */,
 				4A1549B725ECE57C005BB883 /* Frameworks */,
 				4A1549B825ECE57C005BB883 /* Resources */,
+				F277C910A833C9EFC4654803 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +209,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		87D1108E28818BF076E906FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tabinoShiori-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F277C910A833C9EFC4654803 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tabinoShiori/Pods-tabinoShiori-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tabinoShiori/Pods-tabinoShiori-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tabinoShiori/Pods-tabinoShiori-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A1549B625ECE57C005BB883 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -190,6 +261,7 @@
 				4A1549BE25ECE57C005BB883 /* AppDelegate.swift in Sources */,
 				4A1549C025ECE57C005BB883 /* SceneDelegate.swift in Sources */,
 				4A1549E725FF3778005BB883 /* PickerTextField.swift in Sources */,
+				4A1549EB26024F34005BB883 /* MyTripViewController.swift in Sources */,
 				4A1549E125FF2369005BB883 /* TripTableViewCell.swift in Sources */,
 				4A1549E425FF2CEB005BB883 /* NewFileViewController.swift in Sources */,
 				4A1549E92601038F005BB883 /* CheckPermission.swift in Sources */,
@@ -334,6 +406,7 @@
 		};
 		4A1549CF25ECE57D005BB883 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC147D87490208565BDDE373 /* Pods-tabinoShiori.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,6 +425,7 @@
 		};
 		4A1549D025ECE57D005BB883 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C966E500116F984D472DEBC /* Pods-tabinoShiori.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

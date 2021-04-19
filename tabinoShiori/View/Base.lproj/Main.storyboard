@@ -190,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uPe-ba-X60" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2547.826086956522" y="1556.9196428571429"/>
+            <point key="canvasLocation" x="2548" y="1557"/>
         </scene>
         <!--search-->
         <scene sceneID="yDY-4J-2Za">
@@ -428,7 +428,7 @@
         <!--my trip-->
         <scene sceneID="CqU-9V-dV7">
             <objects>
-                <viewController id="8O5-DO-7aE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myTrip" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8O5-DO-7aE" customClass="MySioriViewController" customModule="tabinoShiori" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uRv-C7-ZQC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -476,7 +476,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="H5x-Zq-2uP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bAk-Qq-GIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="VBV-Bj-ibI" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uE6-To-Ukg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -491,6 +490,7 @@
                         <segue destination="XBT-Eq-9rD" kind="relationship" relationship="viewControllers" id="iIc-sq-Xg5"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAk-Qq-GIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="883" y="118"/>
         </scene>
@@ -498,7 +498,7 @@
         <scene sceneID="12M-Ee-fbY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n5S-aB-1TR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="home" id="7Wh-Hz-b5A"/>
+                    <tabBarItem key="tabBarItem" title="home" image="tray.full" catalog="system" selectedImage="tray.full" id="7Wh-Hz-b5A"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lgb-Bf-AUi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -517,7 +517,7 @@
         <scene sceneID="SAK-VY-sma">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9bO-Uo-MXA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="search" id="By9-Xq-j9f"/>
+                    <tabBarItem key="tabBarItem" title="search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="By9-Xq-j9f"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1kc-Eh-WEl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -536,7 +536,7 @@
         <scene sceneID="RRf-Cg-YHD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zCU-Od-Hxq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="favorate" id="RYS-e9-4DI"/>
+                    <tabBarItem key="tabBarItem" title="favorate" image="star" catalog="system" selectedImage="star" id="RYS-e9-4DI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Taw-Zq-57c">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -555,7 +555,7 @@
         <scene sceneID="sOu-hM-BJs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oCa-YE-K0O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="my page" id="gYP-9R-brJ"/>
+                    <tabBarItem key="tabBarItem" title="my page" image="person" catalog="system" selectedImage="person" id="gYP-9R-brJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5tn-yr-kIa">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -600,6 +600,9 @@
                                 <rect key="frame" x="100" y="710" width="214" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="作成"/>
+                                <connections>
+                                    <action selector="createFile:" destination="Uea-3M-e2y" eventType="touchUpInside" id="gDt-OW-LdB"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="シチュエーション" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eh-Ge-uuT" customClass="PickerTextField" customModule="tabinoShiori" customModuleProvider="target">
                                 <rect key="frame" x="39" y="357" width="337" height="34"/>
@@ -613,14 +616,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fXv-oT-S50">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fXv-oT-S50">
                                 <rect key="frame" x="122" y="532" width="170" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIE-lL-WyU">
-                                <rect key="frame" x="330" y="672" width="46" height="30"/>
+                                <rect key="frame" x="315" y="672" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="画像を選択"/>
                                 <connections>
                                     <action selector="albumPick:" destination="Uea-3M-e2y" eventType="touchUpInside" id="YMM-v5-EUp"/>
                                 </connections>
@@ -640,7 +643,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M67-5X-xHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2547.826086956522" y="2987.9464285714284"/>
+            <point key="canvasLocation" x="2548" y="2988"/>
         </scene>
         <!--Title-->
         <scene sceneID="bK1-h2-S2A">
@@ -840,11 +843,11 @@
             </objects>
             <point key="canvasLocation" x="4936" y="118"/>
         </scene>
-        <!--Item-->
+        <!--add item-->
         <scene sceneID="5JI-m6-vT7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XBT-Eq-9rD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ucl-yq-1Dk"/>
+                    <tabBarItem key="tabBarItem" title="add item" image="plus.app" catalog="system" selectedImage="plus.app" id="ucl-yq-1Dk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iVE-05-dLr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1362,4 +1365,11 @@
             <point key="canvasLocation" x="4935" y="4404"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="plus.app" catalog="system" width="64" height="56"/>
+        <image name="star" catalog="system" width="64" height="58"/>
+        <image name="tray.full" catalog="system" width="64" height="44"/>
+    </resources>
 </document>

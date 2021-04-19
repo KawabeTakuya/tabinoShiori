@@ -9,17 +9,17 @@
 import UIKit
 
 final class PickerTextField: UITextField {
-    /* 入力キャレットの非表示　*/
+    // 入力キャレットの非表示
     override func caretRect(for position: UITextPosition) -> CGRect {
         return .zero
     }
     
-    /* 範囲選択カーソル非表示 */
+    // 範囲選択カーソル非表示
     override func selectionRects(for range: UITextRange) -> [UITextSelectionRect] {
         return[]
     }
     
-    /* コピー・ペースト・選択などのメニュー非表示 */
+    // コピー・ペースト・選択などのメニュー非表示 
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         false
     }

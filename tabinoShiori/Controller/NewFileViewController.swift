@@ -39,8 +39,7 @@ class NewFileViewController: UIViewController{
     @IBOutlet weak var fileImageView: UIImageView!
     
     private var checkPermission = CheckPermission()
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         peoplePicker.text = ""
@@ -99,6 +98,19 @@ class NewFileViewController: UIViewController{
         
         let sourceType:UIImagePickerController.SourceType = .photoLibrary
         createImagePicker(sourceType: sourceType)
+        
+    }
+    
+    @IBAction func createFile(_ sender: Any) {
+        
+        if ((tripTitle != nil) && (peoplePicker != nil) && (schedulePicker != nil) && (situationPicker != nil)){
+            
+        //画面遷移
+        let myTrip =
+            self.storyboard?.instantiateViewController(withIdentifier: "myTrip")
+        self.navigationController?.pushViewController(myTrip!, animated: true)
+            
+        }
         
     }
     
