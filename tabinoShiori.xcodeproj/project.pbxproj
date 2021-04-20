@@ -22,6 +22,7 @@
 		4A1549E725FF3778005BB883 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1549E625FF3778005BB883 /* PickerTextField.swift */; };
 		4A1549E92601038F005BB883 /* CheckPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1549E82601038F005BB883 /* CheckPermission.swift */; };
 		4A1549EB26024F34005BB883 /* MyTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1549EA26024F34005BB883 /* MyTripViewController.swift */; };
+		4A83151A262F165F0035655C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A831519262F165F0035655C /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4A1549E625FF3778005BB883 /* PickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		4A1549E82601038F005BB883 /* CheckPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPermission.swift; sourceTree = "<group>"; };
 		4A1549EA26024F34005BB883 /* MyTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripViewController.swift; sourceTree = "<group>"; };
+		4A831519262F165F0035655C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D0843C37DF1610F705B79593 /* Pods_tabinoShiori.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tabinoShiori.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC147D87490208565BDDE373 /* Pods-tabinoShiori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabinoShiori.debug.xcconfig"; path = "Target Support Files/Pods-tabinoShiori/Pods-tabinoShiori.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				4A1549E025FF2369005BB883 /* TripTableViewCell.xib */,
 				4A1549E625FF3778005BB883 /* PickerTextField.swift */,
 				4A1549E82601038F005BB883 /* CheckPermission.swift */,
+				4A831519262F165F0035655C /* Alert.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				4A1549EB26024F34005BB883 /* MyTripViewController.swift in Sources */,
 				4A1549E125FF2369005BB883 /* TripTableViewCell.swift in Sources */,
 				4A1549E425FF2CEB005BB883 /* NewFileViewController.swift in Sources */,
+				4A83151A262F165F0035655C /* Alert.swift in Sources */,
 				4A1549E92601038F005BB883 /* CheckPermission.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

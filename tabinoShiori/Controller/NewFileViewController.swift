@@ -102,19 +102,24 @@ class NewFileViewController: UIViewController{
     }
     
     @IBAction func createFile(_ sender: Any) {
-        
-        if ((tripTitle != nil) && (peoplePicker != nil) && (schedulePicker != nil) && (situationPicker != nil)){
             
-        //画面遷移
-        let myTrip =
-            self.storyboard?.instantiateViewController(withIdentifier: "myTrip")
-        self.navigationController?.pushViewController(myTrip!, animated: true)
+            tabBarNav()
             
         }
         
-    }
-    
-    
+        func tabBarNav(){
+            
+            if (tripTitle.text != "" && peoplePicker.text != "" && schedulePicker.text != "" && situationPicker.text != "") {
+                //空でない場合タブ画面遷移
+                let UINavigationController = tabBarController?.viewControllers?[0]
+                tabBarController?.selectedViewController = UINavigationController
+            } else {
+                //アラート表示
+                Alert.simpleAlert(title: "作成できません", message: "未入力の項目があります", viewController: self) 
+
+            }
+            
+        }
 }
 
 
