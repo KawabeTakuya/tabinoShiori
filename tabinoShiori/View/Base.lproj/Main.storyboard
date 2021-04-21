@@ -11,7 +11,7 @@
         <!--my page-->
         <scene sceneID="WdS-CB-jyh">
             <objects>
-                <viewController id="oba-jW-ECU" sceneMemberID="viewController">
+                <viewController id="oba-jW-ECU" customClass="MyPageViewController" customModule="tabinoShiori" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3vJ-N5-Yha">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,12 +113,70 @@
                         <viewLayoutGuide key="safeArea" id="JOR-ZT-0RR"/>
                     </view>
                     <navigationItem key="navigationItem" title="my page" id="oh1-bW-HXz">
-                        <barButtonItem key="rightBarButtonItem" title="設定" id="EOh-YY-PZA"/>
+                        <barButtonItem key="rightBarButtonItem" title="設定" id="EOh-YY-PZA">
+                            <connections>
+                                <segue destination="BoC-wh-8eo" kind="show" id="B0s-oR-KHw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7t-9j-KkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2547.826086956522" y="2262.7232142857142"/>
+        </scene>
+        <!--My Page Setting View Controller-->
+        <scene sceneID="yQT-sF-Eai">
+            <objects>
+                <viewController id="BoC-wh-8eo" customClass="MyPageSettingViewController" customModule="tabinoShiori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sj7-Mq-7Iu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Eg-ts-IzU">
+                                <rect key="frame" x="41" y="123" width="259" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr8-zH-hRf">
+                                <rect key="frame" x="41" y="405" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cl1-yx-ayG">
+                                <rect key="frame" x="347" y="329" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="変更"/>
+                                <connections>
+                                    <action selector="profileImagePick:" destination="BoC-wh-8eo" eventType="touchUpInside" id="tEz-7E-5Un"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Nv-LF-BWU">
+                                <rect key="frame" x="123" y="398" width="207" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="38F-Vo-6SZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RHk-Fh-etR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="6M8-K7-Ncs">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wW9-jl-SZ3">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileImage" destination="2Eg-ts-IzU" id="xoh-wN-S0j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgG-Uu-bDd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3357.971014492754" y="2262.7232142857142"/>
         </scene>
         <!--favorate-->
         <scene sceneID="9af-zI-yn4">
